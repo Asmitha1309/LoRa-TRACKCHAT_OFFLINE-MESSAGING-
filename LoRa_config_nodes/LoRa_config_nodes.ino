@@ -18,7 +18,7 @@ void setup() {
   delay(1000);
 
   Serial.println("================================");
-  Serial.println("   E220 NODE 2 CONFIGURATION");
+  Serial.println("   E220 NODE 3 CONFIGURATION");
   Serial.println("================================");
 
   e220ttl.begin();
@@ -36,7 +36,7 @@ void setup() {
 
   // NODE 2 ADDRESS
   configuration.ADDH = 0;
-  configuration.ADDL = 2;
+  configuration.ADDL = 3;
 
   // 868.125 MHz
   configuration.CHAN = 18;
@@ -74,7 +74,7 @@ void setup() {
     Configuration verify = *(Configuration*)check.data;
 
     Serial.println();
-    Serial.println("----- NODE 2 CONFIGURATION -----");
+    Serial.println("----- NODE 3 CONFIGURATION -----");
 
     Serial.print("Address High: ");
     Serial.println(verify.ADDH);
@@ -91,7 +91,7 @@ void setup() {
     Serial.println("Transmit Power: 22 dBm");
 
     Serial.println("--------------------------------");
-    Serial.println("NODE 2 CONFIGURATION COMPLETE!");
+    Serial.println("NODE 3 CONFIGURATION COMPLETE!");
 
   } else {
 
